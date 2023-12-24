@@ -1,0 +1,60 @@
+@import "variables";
+@import "fonts";
+@import "~normalize.css";
+
+
+
+@import 'header';
+@import 'button';
+@import 'titleGroup';
+@import 'menu';
+@import 'linkItem';
+@import 'firstBlock';
+@import 'buttonMore';
+
+@import 'headerSwiper';
+@import 'brandsSwiper';
+@import 'contentCard';
+
+@import 'sidebar';
+@import 'list';
+@import 'contacts';
+@import 'lang';
+
+@import 'price';
+@import 'priceItem';
+@import 'priceButton';
+@import 'commercial';
+@import 'getCommercial';
+
+@import 'footer';
+
+@import 'modal';
+
+body {
+  background-color: $bgColor;
+  display: flex;
+  max-width: $screenDt + 320px;
+  margin: 0 auto;
+}
+
+.widthScreen {
+  font-family: $regularFont;
+  background-color: $bgColor;
+  color: $mainText;
+  min-width: 320px;
+  max-width: $screenDt;
+  position: relative;
+}
+
+.mainWrapper {
+  padding: 24px 16px;
+
+  @media (min-width: $screenTb) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screenDt) {
+    padding: 32px;
+  }
+}

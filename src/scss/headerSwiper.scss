@@ -1,0 +1,20 @@
+.headerSwiper {
+  border-top: 1px solid #D9FFF5;
+  background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  background-clip: padding-box;
+  padding: 16px;
+
+  @media (min-width: $screenTb) {
+    padding: 16px 24px;
+  }
+
+  @media (min-width: $screenDt) {
+    padding: 16px 32px;
+  }
+
+  &--textStyle {
+    color: $headerText;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}

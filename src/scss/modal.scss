@@ -1,0 +1,50 @@
+.modal {
+  font-family: $regularFont;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 4;
+
+  &__window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    height: 100vh;
+    margin-left: auto;
+    padding: 24px;
+    box-sizing: border-box;
+
+    @media (min-width: $screenTb) {
+      width: 400px;
+    }
+  }
+
+  &__open {
+    display: flex;
+    position: fixed;
+  }
+
+  &__form {
+    margin: 24px 0 16px 0;
+  }
+
+  &__input {
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+
+  &__approval {
+    &--rose {
+      color: $button;
+    }
+  }
+
+  &__button {
+    margin: 16px 0 0 auto;
+  }
+}

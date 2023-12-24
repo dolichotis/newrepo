@@ -1,0 +1,30 @@
+.buttonMore {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $mediumFont;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url('../img/expand.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+
+    @media (min-width: $screenTb) {
+      left: 24px;
+    }
+
+    @media (min-width: $screenDt) {
+      left: 32px;
+    }
+  }
+
+  &--padding {
+    padding: 13px 0 0 0;
+    margin-left: 32px;
+  }
+}

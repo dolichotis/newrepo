@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  padding: 16px;
+  border-top: 1px solid $borderBottom;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+  margin-top: 40px;
+
+  @media (min-width: $screenTb) {
+    flex-wrap: nowrap;
+    padding: 24px 32px ;
+  }
+
+  @media (min-width: $screenDt) {
+    flex-wrap: nowrap;
+    padding: 32px;
+  }
+
+  &__text {
+    white-space: pre-line;
+    font-size: 14px;
+    color: $headerText;
+    font-family: $mediumFont;
+    opacity: 72%;
+  }
+}

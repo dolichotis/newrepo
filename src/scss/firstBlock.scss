@@ -1,0 +1,53 @@
+.firstBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+
+  @media (min-width: $screenTb) {
+    flex-wrap: nowrap;
+  }
+
+  &__text {
+    align-self: flex-start;
+    flex-grow: 1;
+    margin-bottom: 16px;
+
+    @media (min-width: $screenTb) {
+      width: 100%;
+    }
+
+    &--style {
+      white-space: pre-line;
+      margin: 0;
+      height: 38px;
+      overflow: hidden;
+
+      @media (min-width: $screenTb) {
+        height: 72px;
+      }
+
+      @media (min-width: $screenDt) {
+        height: 57px;
+      }
+    }
+  }
+
+  &__image {
+    min-width: 320px;
+    height: auto;
+    margin: 0;
+    width: 100%;
+
+    @media (min-width: $screenTb) {
+      margin-left: 24px;
+    }
+
+    @media (min-width: $screenDt) {
+      margin-left: 32px;
+    }
+  }
+
+  &__readMore {
+
+  }
+}

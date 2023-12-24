@@ -1,0 +1,23 @@
+.contacts {
+  &__button:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+
+.email {
+  display: block;
+  padding: 0;
+  margin-top: 16px;
+  color: $mainText;
+  font-family: $regularFont;
+}
+
+.phone {
+  padding: 0;
+  margin-top: 12px;
+  font-family: $boldFont;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+  color: $mainText;
+}

@@ -1,0 +1,82 @@
+.header {
+  background-color: $headerColor;
+  display: flex;
+  align-items: center;
+  padding: 24px 16px;
+  justify-content: flex-start;
+  border-bottom: 1px solid $borderBottom;
+
+  @media (min-width: $screenTb) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screenDt) {
+    display: none;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__navigation {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+
+  &__logo {
+    margin-left: 4px;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      margin-left: 16px;
+      vertical-align: middle;
+
+      @media (min-width: $screenTb) {
+        display: none;
+      }
+    }
+
+    &::before {
+      margin-right: 20px;
+    }
+  }
+
+  &__navigation--hidden {
+    display: none;
+
+    @media (min-width: $screenTb) {
+      display: flex;
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 20px;
+    }
+  }
+
+  &__logo--center {
+    vertical-align: middle;
+  }
+
+  &__logo::before,
+  &__navigation--hidden::after {
+    @media (min-width: $screenTb) {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      vertical-align: middle;
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.getCommercial {
+  font-family: $boldFont;
+  padding: 0 16px;
+  margin: 16px 0 0 0;
+  position: relative;
+  text-decoration: none;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $screenTb) {
+    padding: 0 24px;
+  }
+
+  @media (min-width: $screenDt) {
+    padding: 0 32px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/more.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 1px;
+  }
+}

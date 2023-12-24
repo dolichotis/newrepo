@@ -1,0 +1,33 @@
+.menuContainer {
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+
+  @media (min-width: $screenDt) {
+    white-space: normal;
+  }
+
+  &__elem {
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  &__item {
+    padding: 8px 16px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: white;
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+    }
+  }
+}

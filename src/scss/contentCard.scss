@@ -1,0 +1,35 @@
+.contentCard {
+  width: 240px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background-color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+
+  @media (min-width: $screenTb) {
+    width: 224px;
+  }
+
+  @media (min-width: $screenDt) {
+    width: 240px;
+  }
+
+  &__repair {
+    height: 160px;
+    align-items: flex-start;
+  }
+
+  &--background {
+    background-image: url('../img/go.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-origin: content-box;
+  }
+}

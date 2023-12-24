@@ -1,0 +1,50 @@
+.titleGroup {
+  display: flex;
+
+  &__text {
+    align-self: center;
+    font-family: $boldFont;
+    font-size: 28px;
+    line-height: 40px;
+    display: inline-block;
+    margin: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 40px;
+      background-color: #41F6D7;
+      border-radius: 0 40px 40px 0;
+      left: 0;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media (min-width: $screenDt) {
+      display: flex;
+    }
+
+    &--style {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+  }
+
+  &__item {
+    margin-left: 8px;
+  }
+}

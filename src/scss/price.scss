@@ -1,0 +1,11 @@
+.price {
+  padding: 16px;
+
+  @media (min-width: $screenTb) {
+    padding: 24px;
+  }
+
+  @media (min-width: $screenDt) {
+    padding: 32px;
+  }
+}
