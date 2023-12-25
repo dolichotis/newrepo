@@ -937,7 +937,8 @@ button.swiper-pagination-bullet {
     padding: 13px 0 0 0;
     margin-left: 32px; }
   .buttonMore--show {
-    height: auto; }
+    height: auto;
+    overflow: auto; }
   .buttonMore--hide::before {
     content: "";
     position: absolute;
@@ -996,6 +997,9 @@ button.swiper-pagination-bullet {
     @media (min-width: 768px) {
       .brandsSwiper__button {
         display: block; } }
+  .brandsSwiper--show {
+    overflow: auto;
+    height: auto; }
 
 .contentCard {
   width: 240px;
