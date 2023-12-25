@@ -734,6 +734,7 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@charset "UTF-8";
 @font-face {
   font-family: 'TTLakes-Regular';
   src: url(./fonts/TTLakes-Regular.ttf) format("truetype"); }
@@ -899,10 +900,7 @@ button.swiper-pagination-bullet {
       overflow: hidden; }
       @media (min-width: 768px) {
         .firstBlock__text--style {
-          height: 72px; } }
-      @media (min-width: 1120px) {
-        .firstBlock__text--style {
-          height: 57px; } }
+          height: 62px; } }
   .firstBlock__image {
     min-width: 320px;
     height: auto;
@@ -1133,28 +1131,42 @@ button.swiper-pagination-bullet {
       color: #7E7E82; }
 
 .price {
-  padding: 16px; }
+  padding: 16px;
+  height: 250px; }
   @media (min-width: 768px) {
     .price {
-      padding: 24px; } }
+      padding: 24px;
+      height: auto; } }
   @media (min-width: 1120px) {
     .price {
       padding: 32px; } }
+  .price__wrapper {
+    height: auto; }
+    @media (min-width: 768px) {
+      .price__wrapper {
+        display: flex;
+        flex-direction: column; } }
 
 .priceItem {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 200px;
+  padding: 16px;
+  border-radius: 6px; }
   @media (min-width: 768px) {
     .priceItem {
-      padding: 16px; } }
+      height: 100%;
+      align-items: center;
+      border-radius: 0; }
+      .priceItem:nth-child(2) {
+        border-radius: 6px 6px 0 0; }
+      .priceItem:last-child {
+        border-radius: 0 0 6px 6px; } }
   @media (min-width: 1120px) {
     .priceItem {
       padding: 16px 24px; } }
-  .priceItem:nth-child(2) {
-    border-radius: 10px 10px 0 0; }
-  .priceItem:last-child {
-    border-radius: 0 0 10px 10px; }
   .priceItem :first-child {
     width: 350px; }
   .priceItem :nth-child(2) {
@@ -1167,18 +1179,40 @@ button.swiper-pagination-bullet {
     font-size: 14px; }
     .priceItem__text--gray {
       color: #7E7E82; }
+  .priceItem--services::before, .priceItem--price::before, .priceItem--time::before {
+    display: block;
+    color: #7E7E82; }
+    @media (min-width: 768px) {
+      .priceItem--services::before, .priceItem--price::before, .priceItem--time::before {
+        display: none; } }
+  .priceItem--services::before {
+    content: 'Ремонтные услуги'; }
+  .priceItem--price::before {
+    content: 'Цена'; }
+  .priceItem--time::before {
+    content: 'Срок'; }
   .priceItem--title {
-    padding-top: 0; }
+    padding-top: 0;
+    display: none; }
+    @media (min-width: 768px) {
+      .priceItem--title {
+        display: flex; } }
   .priceItem--background {
     background: #FFF;
-    position: relative; }
-    .priceItem--background::after {
-      content: '';
-      position: absolute;
-      background: #EAEAEA;
-      bottom: 0;
-      width: 95%;
-      height: 1px; }
+    width: 260px;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      .priceItem--background {
+        position: relative;
+        width: auto;
+        flex-direction: row; }
+        .priceItem--background::after {
+          content: '';
+          position: absolute;
+          background: #EAEAEA;
+          bottom: 0;
+          width: 95%;
+          height: 1px; } }
 
 .priceButton {
   background: #FF3E79 url(./static/goside.svg) 94px no-repeat;
@@ -1235,12 +1269,16 @@ button.swiper-pagination-bullet {
   border-top: 1px solid #D9FFF5;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
-  margin-top: 40px; }
+  gap: 16px;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: center; }
   @media (min-width: 768px) {
     .footer {
       flex-wrap: nowrap;
-      padding: 24px 32px; } }
+      padding: 24px 32px;
+      flex-direction: row;
+      gap: 35px; } }
   @media (min-width: 1120px) {
     .footer {
       flex-wrap: nowrap;
