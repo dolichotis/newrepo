@@ -1,11 +1,23 @@
 .price {
   padding: 16px;
+  height: 250px;
 
   @media (min-width: $screenTb) {
     padding: 24px;
+    height: auto;
   }
 
   @media (min-width: $screenDt) {
     padding: 32px;
+  }
+
+  &__wrapper {
+    height: auto;
+
+    @media (min-width: $screenTb) {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 }

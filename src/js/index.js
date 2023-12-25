@@ -1,5 +1,5 @@
-import '../scss/style.scss';
-
+import './../scss/style.scss';
+import Swiper from './../../node_modules/swiper/swiper-bundle';
 
 let screenTb = 768;
 let screenDt = 1120;

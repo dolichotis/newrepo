@@ -221,7 +221,7 @@
 
       <p class="headerSwiper headerSwiper--textStyle">Цены на услуги</p>
       <div class="swiper price">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper price__wrapper">
           <div class="swiper-slide priceItem priceItem__text--gray priceItem--title">
             <div class="priceItem__text">Ремонтные услуги</div>
             <div class="priceItem__text">Цена</div>
@@ -229,41 +229,43 @@
             <div class="priceItem__text"></div>
           </div>
           <div class="swiper-slide priceItem priceItem--background">
-            <div class="priceItem__text">Диагностика</div>
-            <div class="priceItem__text">Бесплатно</div>
-            <div class="priceItem__text">30 мин</div>
+            <div class="priceItem__text priceItem--services">Диагностика</div>
+            <div class="priceItem__text priceItem--price">Бесплатно</div>
+            <div class="priceItem__text priceItem--time">30 мин</div>
             <button class="priceButton">Заказать</button>
           </div>
           <div class="swiper-slide priceItem priceItem--background">
-            <div class="priceItem__text">Замена дисплея</div>
-            <div class="priceItem__text">1000₽</div>
-            <div class="priceItem__text">30-120 мин</div>
+            <div class="priceItem__text priceItem--services">Замена дисплея</div>
+            <div class="priceItem__text priceItem--price">1000₽</div>
+            <div class="priceItem__text priceItem--time">30-120 мин</div>
             <button class="priceButton">Заказать</button>
           </div>
           <div class="swiper-slide priceItem priceItem--background">
-            <div class="priceItem__text">Замена полифонического динамика</div>
-            <div class="priceItem__text">1000₽</div>
-            <div class="priceItem__text">30-120 мин</div>
+            <div class="priceItem__text priceItem--services">Замена полифонического динамика</div>
+            <div class="priceItem__text priceItem--price">1000₽</div>
+            <div class="priceItem__text priceItem--time">30-120 мин</div>
             <button class="priceButton priceButton--text">Заказать</button>
           </div>
           <div class="swiper-slide priceItem priceItem--background">
-            <div class="priceItem__text">Замена полифонического динамика</div>
-            <div class="priceItem__text">1000₽</div>
-            <div class="priceItem__text">30-120 мин</div>
+            <div class="priceItem__text priceItem--services">Замена полифонического динамика</div>
+            <div class="priceItem__text priceItem--price">1000₽</div>
+            <div class="priceItem__text priceItem--time">30-120 мин</div>
             <button class="priceButton priceButton--text">Заказать</button>
           </div>
           <div class="swiper-slide priceItem priceItem--background">
-            <div class="priceItem__text">Замена полифонического динамика</div>
-            <div class="priceItem__text">1000₽</div>
-            <div class="priceItem__text">30-120 мин</div>
+            <div class="priceItem__text priceItem--services">Замена полифонического динамика</div>
+            <div class="priceItem__text priceItem--price">1000₽</div>
+            <div class="priceItem__text priceItem--time">30-120 мин</div>
             <button class="priceButton priceButton--text">Заказать</button>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
       <p class="commercial">Все цены указаны с учетом НДС. Стоимость ремонта указана
         на единичную услугу. Для получения коммерческого
         предложения на постоянное обслуживание, оставьте заявку.</p>
       <button class="getCommercial">Получить коммерческое предложение</button>
+
     </main>
 
     <footer>
@@ -283,6 +285,24 @@
     </footer>
   </div>
 
+  <div class="modal modalCall">
+    <div class="modal__window">
+      <button type="button" class="button modalButton">
+        <img src="img/close.svg" alt="">
+      </button>
+
+      <h2 class="modal__tittle">Заказать звонок</h2>
+
+      <form method="get" class="modal__form">
+        <input type="tel" placeholder="Телефон" class="modal__input">
+      </form>
+
+      <p class="modal__approval">Нажимая “отправить”, вы даете согласие на <span class="modal__approval--rose">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal__approval--rose">политикой конфиденциальности</span></p>
+
+      <button class="priceButton modal__button">Отправить</button>
+    </div>
+  </div>
+
   <div class="modal modalFeedback">
     <div class="modal__window">
       <button type="button" class="button modalButton">
@@ -296,24 +316,6 @@
         <input type="tel" placeholder="Телефон" class="modal__input">
         <input type="email" placeholder="Электронная почта" class="modal__input">
         <input type="text" placeholder="Сообщение" class="modal__input">
-      </form>
-
-      <p class="modal__approval">Нажимая “отправить”, вы даете согласие на <span class="modal__approval--rose">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal__approval--rose">политикой конфиденциальности</span></p>
-
-      <button class="priceButton modal__button">Отправить</button>
-    </div>
-  </div>
-
-  <div class="modal modalCall">
-    <div class="modal__window">
-      <button type="button" class="button modalButton">
-        <img src="img/close.svg" alt="">
-      </button>
-
-      <h2 class="modal__tittle">Заказать звонок</h2>
-
-      <form method="get" class="modal__form">
-        <input type="tel" placeholder="Телефон" class="modal__input">
       </form>
 
       <p class="modal__approval">Нажимая “отправить”, вы даете согласие на <span class="modal__approval--rose">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal__approval--rose">политикой конфиденциальности</span></p>

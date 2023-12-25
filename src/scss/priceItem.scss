@@ -1,23 +1,31 @@
 .priceItem {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 200px;
+  padding: 16px;
+  border-radius: 6px;
 
   @media (min-width: $screenTb) {
-    padding: 16px;
+    height: 100%;
+    align-items: center;
+    border-radius: 0;
+
+    &:nth-child(2) {
+      border-radius: 6px 6px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
   }
 
   @media (min-width: $screenDt) {
     padding: 16px 24px;
   }
 
-  &:nth-child(2) {
-    border-radius: 10px 10px 0 0;
-  }
 
-  &:last-child {
-    border-radius: 0 0 10px 10px;
-  }
 
   & :first-child {
     width: 350px;
@@ -43,21 +51,67 @@
     }
   }
 
+  &--services,
+  &--price,
+  &--time {
+    &::before {
+      display: block;
+      color: $headerText;
+
+      @media (min-width: $screenTb) {
+        display: none;
+      }
+    }
+
+  }
+
+  &--services {
+    &::before {
+      content: 'Ремонтные услуги';
+    }
+  }
+
+  &--price {
+    &::before {
+      content: 'Цена';
+    }
+  }
+
+  &--time {
+    &::before {
+      content: 'Срок';
+    }
+  }
+
   &--title {
     padding-top: 0;
+    display: none;
+
+    @media (min-width: $screenTb) {
+      display: flex;
+    }
   }
 
   &--background {
     background: $headerColor;
-    position: relative;
+    width: 260px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      background: $rectangle;
-      bottom: 0;
-      width: 95%;
-      height: 1px;
+    flex-direction: column;
+
+    @media (min-width: $screenTb) {
+      position: relative;
+      width: auto;
+      flex-direction: row;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: $rectangle;
+        bottom: 0;
+        width: 95%;
+        height: 1px;
+      }
     }
+
   }
 }
