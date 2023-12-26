@@ -18,6 +18,7 @@
     }
 
   }
+
   &__wrapper {
     @media (min-width: $screenTb) {
       display: flex;
@@ -39,5 +40,10 @@
     @media (min-width: $screenTb) {
       display: block;
     }
+  }
+
+  &--show {
+    overflow: auto;
+    height: auto;
   }
 }

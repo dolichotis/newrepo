@@ -25,8 +25,13 @@ let btnSidebar = document.querySelectorAll('.button_close');
 
 if (window.innerWidth < screenDt) {
   for (let i = 0; i < btnSidebar.length; i++) {
-    btnSidebar[i].addEventListener("click", function() {
+    btnSidebar[i].addEventListener("click", function(e) {
       sidebar.classList.toggle('sidebar__active');
+    });
+    btnSidebar[i].addEventListener("keydown", function(e) {
+      if (e.keyCode === 27) {
+        sidebar.classList.toggle('sidebar__active');
+      }
     });
   }
 }
@@ -43,13 +48,48 @@ for (let i = 0; i < btnModal.length; i++) {
 
 for (let i = 0; i < modal.length; i++) {
   let btnHeader = modal[i].querySelector('.modalButton');
-  console.log(btnHeader);
   btnHeader.addEventListener("click", function() {
     modal[i].classList.toggle('modal__open');
   });
 }
 
+let HeaderModalBtn = document.querySelectorAll('.HeaderModalBtn');
+for (let i = 0; i < modal.length; i++) {
+  HeaderModalBtn[i].addEventListener("click", function() {
+    modal[i].classList.toggle('modal__open');
+  });
+  HeaderModalBtn[i].addEventListener("keydown", function(e) {
+    if (e.keyCode === 27) {
+      modal[i].classList.toggle('modal__open');
+    }
+  });
+}
 
+
+
+let btnMoreText = document.querySelectorAll('.btnMoreText');
+let showMore = document.querySelectorAll('.showLess');
+
+for (let i = 0; i < btnMoreText.length; i++) {
+  btnMoreText[i].addEventListener('click', function() {
+    showMore[i].classList.toggle('buttonMore--show');
+    if (document.querySelector('.buttonMore--show')) {
+      btnMoreText[i].textContent = 'Скрыть';
+    }
+    else btnMoreText[i].textContent = 'Читать далее';
+  });
+}
+
+let btnMoreSwiper = document.querySelectorAll('.btnMoreSwiper');
+let showLessSwiper = document.querySelectorAll('.showLessSwiper');
+
+for (let i = 0; i < btnMoreSwiper.length; i++) {
+  btnMoreSwiper[i].addEventListener("click", function() {
+    showLessSwiper[i].classList.toggle('brandsSwiper--show');
+    if (document.querySelector('.brandsSwiper--show')) btnMoreSwiper[i].textContent = 'Скрыть';
+    else btnMoreSwiper[i].textContent = 'Показать все';
+  });
+}
 
 
 
