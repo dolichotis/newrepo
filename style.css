@@ -933,6 +933,20 @@ button.swiper-pagination-bullet {
     @media (min-width: 1120px) {
       .buttonMore--more::before {
         left: 32px; } }
+  .buttonMore--less::before {
+    content: "";
+    position: absolute;
+    background: url(./static/expand.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    transform: rotate(180deg); }
+    @media (min-width: 768px) {
+      .buttonMore--less::before {
+        left: 24px; } }
+    @media (min-width: 1120px) {
+      .buttonMore--less::before {
+        left: 32px; } }
   .buttonMore--padding {
     padding: 13px 0 0 0;
     margin-left: 32px; }
